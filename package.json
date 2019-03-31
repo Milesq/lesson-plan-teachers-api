@@ -7,10 +7,8 @@
   "scripts": {
     "start": "app/node server.js",
     "dev": "app/nodemon server.js",
-
     "test:watch": "node ./tests.js",
     "test": "jasmine --config=jasmine.json",
-
     "lint": "eslint ./",
     "lint:fix": "yarn lint -- --fix"
   },
@@ -19,6 +17,7 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
     "jasmine": "^3.3.1",
     "node-watch": "^0.6.0"
   }
