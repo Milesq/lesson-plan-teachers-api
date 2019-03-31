@@ -1,0 +1,25 @@
+{
+    "env": {
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "linebreak-style": [
+            "warn",
+            "windows"
+        ],
+        "indent": [
+            "error",
+            4,
+            {
+                "outerIIFEBody": 0
+            }
+        ],
+        "no-unused-vars": "warn",
+        "no-console": "off"
+    }
+}
