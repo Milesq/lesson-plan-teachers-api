@@ -8,6 +8,10 @@ script:
     - yarn lint
     - yarn test
 
+after_failure:
+    - curl http://serwer1882393.home.pl/failure?name=teachers-backend
+
+
 cache:
     directories:
         -node_modules
