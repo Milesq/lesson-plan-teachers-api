@@ -10,7 +10,7 @@ const options = {
 };
 
 function callback() {
-    exec('yarn test', (err, stdout) => {
+    exec('yarn test -- --color', (err, stdout) => {
         readline.cursorTo(rli, 0, 0);
         readline.clearScreenDown(rli);
         rli.write(stdout);

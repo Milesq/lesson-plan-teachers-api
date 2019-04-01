@@ -16,28 +16,30 @@ function clear(document) {
     return document;
 }
 
-module.exports = async url => {
+exports.default = async url => {
     let hours =  [];
     const { data } = await axios.get(url);
     let document = parse(data).querySelectorAll('table')[2];
-    document = clear(document);
-    document.querySelectorAll('tr').forEach(el => {
-        const hour = [];
-        el.querySelectorAll('td').forEach((el, i) => {
-            const data = {};
-            const teacher = el.querySelector('.n');
-            if (teacher) {
-                data['subject'] = (el.querySelector('.p') || {innerHTML: ''}).innerHTML;
-                data['teacher'] = teacher.innerHTML;
-                data['room'] = (el.querySelector('.s') || {innerHTML: ''}).innerHTML;
-            }
+    // document = clear(document);
+    // document.querySelectorAll('tr').forEach(el => {
+    //     const hour = [];
+    //     el.querySelectorAll('td').forEach((el, i) => {
+    //         const data = {};
+    //         const teacher = el.querySelector('.n');
+    //         if (teacher) {
+    //             data['subject'] = (el.querySelector('.p') || {innerHTML: ''}).innerHTML;
+    //             data['teacher'] = teacher.innerHTML;
+    //             data['room'] = (el.querySelector('.s') || {innerHTML: ''}).innerHTML;
+    //         }
 
-            data['day'] = i + 1;
-            hour.push(data);
-        });
+    //         data['day'] = i + 1;
+    //         hour.push(data);
+    //     });
 
-        hours.push(hour);
-    });
+    //     hours.push(hour);
+    // });
 
-    return hours
+    return document.outerHTML;
 };
+
+exports.clear = clear;

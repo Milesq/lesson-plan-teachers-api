@@ -8,7 +8,7 @@
     "start": "node app/server.js",
     "dev": "nodemon app/server.js",
     "test:watch": "node ./tests.js",
-    "test": "jasmine --config=jasmine.json",
+    "test": "jasmine --config=jasmine.json --color",
     "lint": "eslint ./",
     "lint:fix": "yarn lint -- --fix"
   },
