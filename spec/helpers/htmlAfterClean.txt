@@ -1,0 +1,103 @@
+<table border="1" cellspacing="0" cellpadding="4" class="tabela">
+<tbody>
+<tr>
+
+
+<td class="l"><span class="p">wf</span>-w4 <span class="p">#515</span> <span class="s">SILOWNIA</span></td>
+<td class="l"><span class="p">r_fizyka</span> <span class="n">NA</span> <span class="s">S_12</span></td>
+<td class="l"><span class="p">wf</span>-w1 <span class="p">#524</span> <span class="s">GIMWF</span></td>
+<td class="l">&nbsp;</td>
+<td class="l"><span class="p">wf</span>-w2 <span class="p">#523</span> <span class="s">GIMWF</span></td>
+
+</tr>
+<tr>
+
+
+<td class="l"><span class="p">wf</span>-w4 <span class="p">#515</span> <span class="s">Torbyd1</span></td>
+<td class="l"><span class="p">r_fizyka</span> <span class="n">NA</span> <span class="s">S_12</span></td>
+<td class="l"><span class="p">mat</span> <span class="n">Za</span> <span class="s">S_10</span></td>
+<td class="l">&nbsp;</td>
+<td class="l"><span class="p">mat</span> <span class="n">Za</span> <span class="s">S_10</span></td>
+
+</tr>
+<tr>
+
+
+<td class="l"><span class="p">wf</span>-w4 <span class="p">#515</span> <span class="s">Torbyd1</span></td>
+<td class="l"><span class="p">r_fizyka</span> <span class="n">NA</span> <span class="s">S_12</span></td>
+<td class="l"><span class="p">mat</span> <span class="n">Za</span> <span class="s">S_10</span></td>
+<td class="l"><span style="font-size:85%"><span class="p">religia-rel</span> <span class="n">DP</span> <span class="s">S_2</span></span></td>
+<td class="l"><span class="p">r_matematyka</span> <span class="n">Za</span> <span class="s">S_10</span></td>
+
+</tr>
+<tr>
+
+
+<td class="l"><span class="p">wf</span>-w3 <span class="p">#516</span> <span class="s">L2</span></td>
+<td class="l"><span style="font-size:85%"><span class="p">j.rosyjski-1/2</span> <span class="n">PW</span> <span class="s">S_32</span></span><br><span style="font-size:85%"><span class="p">j.angielski-2/2</span> <span class="n">JZ</span> <span class="s">S_11a</span></span></td>
+<td class="l"><span class="p">r_fizyka</span> <span class="n">Ka</span> <span class="s">S_18</span></td>
+<td class="l"><span style="font-size:85%"><span class="p">religia-rel</span> <span class="n">DP</span> <span class="s">S_1</span></span></td>
+<td class="l"><span class="p">r_fizyka</span> <span class="n">Ka</span> <span class="s">S_18</span></td>
+
+</tr>
+<tr>
+
+
+<td class="l"><span class="p">j.polsk</span> <span class="n">TJ</span> <span class="s">S_18</span></td>
+<td class="l"><span style="font-size:85%"><span class="p">j.rosyjski-1/2</span> <span class="n">PW</span> <span class="s">S_32</span></span><br><span style="font-size:85%"><span class="p">j.angielski-2/2</span> <span class="n">JZ</span> <span class="s">S_11a</span></span></td>
+<td class="l"><span class="p">r_fizyka</span> <span class="n">Ka</span> <span class="s">S_18</span></td>
+<td class="l"><span class="p">r_matematyka</span> <span class="n">Za</span> <span class="s">S_10</span></td>
+<td class="l"><span class="p">r_matematyka</span> <span class="n">Za</span> <span class="s">S_10</span></td>
+
+</tr>
+<tr>
+
+
+<td class="l"><span class="p">j.polsk</span> <span class="n">TJ</span> <span class="s">S_6</span></td>
+<td class="l"><span class="p">wf</span>-w2 <span class="p">#523</span> <span class="s">L1</span><br><span class="p">wf</span>-w3 <span class="p">#516</span> <span class="s">Torbyd2</span></td>
+<td class="l"><span style="font-size:85%"><span class="p">j.angielski-1/2</span> <span class="n">JZ</span> <span class="s">S_11a</span></span><br><span style="font-size:85%"><span class="p">j.rosyjski-2/2</span> <span class="n">PW</span> <span class="s">S_32</span></span></td>
+<td class="l"><span class="p">r_fizyka</span> <span class="n">Ka</span> <span class="s">S_18</span></td>
+<td class="l"><span class="p">j.polsk</span> <span class="n">TJ</span> <span class="s">S_13</span></td>
+
+</tr>
+<tr>
+
+
+<td class="l"><span class="p">u_hist.i sp.</span> <span class="n">WM</span> <span class="s">S_25</span></td>
+<td class="l"><span class="p">wf</span>-w2 <span class="p">#523</span> <span class="s">L1</span><br><span class="p">wf</span>-w3 <span class="p">#516</span> <span class="s">Torbyd2</span></td>
+<td class="l"><span class="p">r_matematyka</span> <span class="n">Za</span> <span class="s">S_10</span></td>
+<td class="l"><span style="font-size:85%"><span class="p">j.angielski-1/2</span> <span class="n">JZ</span> <span class="s">S_11a</span></span><br><span style="font-size:85%"><span class="p">j.rosyjski-2/2</span> <span class="n">PW</span> <span class="s">S_32</span></span></td>
+<td class="l"><span style="font-size:85%"><span class="p">j.angielski-2/2</span> <span class="n">JZ</span> <span class="s">S_11a</span></span></td>
+
+</tr>
+<tr>
+
+
+<td class="l"><span class="p">j.polsk</span> <span class="n">TJ</span> <span class="s">S_24</span></td>
+<td class="l">&nbsp;</td>
+<td class="l">&nbsp;</td>
+<td class="l"><span class="p">u_hist.i sp.</span> <span class="n">WM</span> <span class="s">S_25</span></td>
+<td class="l">&nbsp;</td>
+
+</tr>
+<tr>
+
+
+<td class="l"><span class="p">wf</span>-1/4 <span class="p">#613</span> <span class="s">SILOWNIA</span></td>
+<td class="l">&nbsp;</td>
+<td class="l"><span class="p">wf</span>-1/4 <span class="p">#613</span> <span class="s">BAS1</span></td>
+<td class="l"><span class="p">godz.wy</span> <span class="n">EV</span> <span class="s">S_P1</span></td>
+<td class="l">&nbsp;</td>
+
+</tr>
+<tr>
+
+
+<td class="l">&nbsp;</td>
+<td class="l">&nbsp;</td>
+<td class="l">&nbsp;</td>
+<td class="l"><span style="font-size:85%"><span class="p">j.angielski-1/2</span> <span class="n">JZ</span> <span class="s">S_11a</span></span></td>
+<td class="l">&nbsp;</td>
+
+</tr>
+</tbody></table>
