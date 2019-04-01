@@ -8,7 +8,7 @@ describe('getPlan function', () => {
     });
 
     it('work', async () => {
-        const correct = [ [ { day: 1 },
+        let correct = [ [ { day: 1 },
             { subject: 'r_fizyka', teacher: 'NA', room: 'S_12', day: 2 },
             { day: 3 },
             { day: 4 },
@@ -70,8 +70,22 @@ describe('getPlan function', () => {
                 room: 'S_11a',
                 day: 4 },
             { day: 5 } ]];
+        const plan = await getPlan('http://zsm1.bydgoszcz.pl/1plan/plany/o8.html');
+        let content = plan;
+        expect(isEqual(content, correct)).toBeTruthy();
 
-        const content = await getPlan('http://zsm1.bydgoszcz.pl/1plan/plany/o8.html');
+        content = plan;
+        content = content.map(hour => {
+            return hour.filter(lesson => lesson.teacher === '___');
+        });
+        expect(isEqual(content, new Array(10).fill([]))).toBeTruthy();
+
+        correct = [[],[],[],[],[{"subject": "j.polsk","teacher": "TJ","room": "S_18",  "day": 1  }  ],[  {  "subject": "j.polsk",  "teacher": "TJ",  "room": "S_6", "day": 1 }, { "subject": "j.polsk", "teacher": "TJ", "room": "S_13", "day": 5 } ], [], [ { "subject": "j.polsk", "teacher": "TJ", "room": "S_24", "day": 1 } ], [], []];
+
+        content = plan;
+        content = content.map(hour => {
+            return hour.filter(lesson => lesson.teacher === 'TJ');
+        });
         expect(isEqual(content, correct)).toBeTruthy();
     });
 });
