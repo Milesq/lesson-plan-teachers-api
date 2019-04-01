@@ -9,10 +9,12 @@ app.use(express.static(resolve('./dist/')));
 
 app.get('/:code', ({ params }, res, next) => {
     next(/^\w{2}$/.test(params.code)? undefined : 'route');
-}, require('./main.js'));
+}, async (req, res) => {
+    res.send(await require('./main.js')(req.params.code));
+});
 
 app.get('/', (...[, res]) => {
     res.sendFile(resolve('dist/index.html'));
 });
 
-app.listen(8080, () => console.log('Server is online'));
+app.listen(8080, () => console.log('Server is online on port 8080'));
