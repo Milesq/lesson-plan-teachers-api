@@ -5,20 +5,23 @@
   "author": "Milesq",
   "license": "MIT",
   "scripts": {
-    "start": "app/node server.js",
-    "dev": "app/nodemon server.js",
+    "start": "node app/server.js",
+    "dev": "nodemon app/server.js",
     "test:watch": "node ./tests.js",
     "test": "jasmine --config=jasmine.json",
     "lint": "eslint ./",
     "lint:fix": "yarn lint -- --fix"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "cors": "^2.8.5",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "jsdom": "^14.0.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
     "jasmine": "^3.3.1",
-    "node-watch": "^0.6.0"
+    "node-watch": "^0.6.0",
+    "nodemon": "^1.18.10"
   }
 }
