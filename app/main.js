@@ -1,11 +1,10 @@
-const getPlan = require('./getPlanFromUrl');
+const { getPlan } = require('./getPlanFromUrl');
 
-module.exports = async code => {
+exports.default = async code => {
     let plan = await getPlan('http://zsm1.bydgoszcz.pl/1plan/plany/o8.html');
-    // plan = plan.map(hour => {
-    //     return hour.filter(lesson => lesson.teacher === code);
-    // });
+    plan = plan.map(hour => {
+        return hour.filter(lesson => lesson.teacher === code);
+    });
 
-    return plan;
-    // return JSON.stringify(plan, null, 2);
+    return JSON.stringify(plan, null, 2);
 };
