@@ -12,6 +12,8 @@ app.use(cors());
 
 app.use(express.static(resolve('./dist/')));
 
+app.get('/reset/cache', require('./deleteCache.js').default);
+
 app.get('/:code', ({ params }, res, next) => {
     next(/^\w{2}$/.test(params.code)? undefined : 'route');
 }, async (req, res) => {
