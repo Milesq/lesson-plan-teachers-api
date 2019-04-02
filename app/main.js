@@ -1,10 +1,22 @@
 const { getPlan } = require('./getPlanFromUrl');
 
-exports.default = async code => {
-    let plan = await getPlan('http://zsm1.bydgoszcz.pl/1plan/plany/o8.html');
-    plan = plan.map(hour => {
-        return hour.filter(lesson => lesson.teacher === code);
-    });
+function merge(first, second) {
+    return first.map((el, i) => el.concat(second[i]));
+}
 
-    return JSON.stringify(plan, null, 2);
+exports.default = async code => {
+    let data = '';
+
+    for (let i=5;i<=7;++i) {
+        let plan = await getPlan(`http://zsm1.bydgoszcz.pl/1plan/plany/o${i}.html`);
+        plan = plan.map(hour => {
+            return hour.filter(lesson => lesson.teacher === code);
+        });
+
+        data += JSON.stringify(plan, null, 2) + '\n\n\n\n\n';
+    }
+
+    return data;
 };
+
+exports.merge = merge;
