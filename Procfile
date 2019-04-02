@@ -1,1 +1,1 @@
-web: node app/server.js
+web: sudo node app/server.js
