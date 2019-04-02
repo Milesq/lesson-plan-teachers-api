@@ -5,6 +5,7 @@ function merge(first, second) {
 }
 
 exports.default = async code => {
+    console.log('Fetching data');
     let data = [];
 
     for (let i=5;i<=7;++i) {
