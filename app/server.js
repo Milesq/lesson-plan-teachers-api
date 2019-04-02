@@ -1,5 +1,4 @@
 const express = require('express');
-const { resolve } = require('path');
 const app = express();
 const cors = require('cors');
 const {
@@ -7,6 +6,8 @@ const {
     readFileSync,
     existsSync
 } = require('fs');
+
+app.set('port', process.env.PORT || 80);
 
 app.use(cors());
 
@@ -54,4 +55,4 @@ const second = 1000,
 setInterval(require('./deleteCache.js').default, day * 1.5);
 setTimeout(require('./deleteCache.js').default, 2 * hour);
 
-app.listen(80, () => console.log('Server is online on port 80'));
+app.listen(app.get('port'), () => console.log('Server is online on port ' + app.get('port')));
