@@ -46,4 +46,12 @@ app.get('/', (...[, res]) => {
     res.sendFile(resolve('dist/index.html'));
 });
 
+const second = 1000,
+    minute = 60 * second,
+    hour = 60 * minute,
+    day = 24 * hour;
+
+setInterval(require('./deleteCache.js').default, day * 1.5);
+setTimeout(require('./deleteCache.js').default, 2 * hour);
+
 app.listen(8080, () => console.log('Server is online on port 8080'));
