@@ -10,10 +10,10 @@ const {
 
 app.use(cors());
 
-app.use(express.static(resolve('./dist/')));
+// app.use(express.static(resolve('./dist/')));
 
 app.get('/', (...[, res]) => {
-    res.sendFile(resolve('dist/index.html'));
+    res.send('Hello World');
 });
 
 app.get('/reset/cache', require('./deleteCache.js').default);
