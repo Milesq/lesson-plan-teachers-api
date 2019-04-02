@@ -8,7 +8,7 @@ exports.default = async code => {
     console.log('Fetching data');
     let data = [];
 
-    for (let i=5;i<=7;++i) {
+    for (let i=1;i<=27;++i) {
         let plan = await getPlan(`http://zsm1.bydgoszcz.pl/1plan/plany/o${i}.html`);
         plan = plan.map(hour => {
             return hour.filter(lesson => lesson.teacher === code);
