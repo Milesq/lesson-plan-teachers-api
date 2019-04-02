@@ -12,6 +12,10 @@ app.use(cors());
 
 app.use(express.static(resolve('./dist/')));
 
+app.get('/', (...[, res]) => {
+    res.sendFile(resolve('dist/index.html'));
+});
+
 app.get('/reset/cache', require('./deleteCache.js').default);
 
 app.get('/:code', ({ params }, res, next) => {
@@ -42,10 +46,6 @@ app.get('/:code', ({ params }, res, next) => {
     res.send(response);
 });
 
-app.get('/', (...[, res]) => {
-    res.sendFile(resolve('dist/index.html'));
-});
-
 const second = 1000,
     minute = 60 * second,
     hour = 60 * minute,
@@ -54,4 +54,4 @@ const second = 1000,
 setInterval(require('./deleteCache.js').default, day * 1.5);
 setTimeout(require('./deleteCache.js').default, 2 * hour);
 
-app.listen(8080, () => console.log('Server is online on port 8080'));
+app.listen(80, () => console.log('Server is online on port 80'));
