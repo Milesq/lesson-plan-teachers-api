@@ -5,7 +5,7 @@ function merge(first, second) {
 }
 
 exports.default = async code => {
-    let data = '';
+    let data = [];
 
     for (let i=5;i<=7;++i) {
         let plan = await getPlan(`http://zsm1.bydgoszcz.pl/1plan/plany/o${i}.html`);
@@ -13,10 +13,13 @@ exports.default = async code => {
             return hour.filter(lesson => lesson.teacher === code);
         });
 
-        data += JSON.stringify(plan, null, 2) + '\n\n\n\n\n';
+        while (plan.length < data.length) plan.push([]);
+        while (plan.length > data.length) data.push([]);
+
+        data = merge(data, plan);
     }
 
-    return data;
+    return JSON.stringify(data, null, 2);
 };
 
 exports.merge = merge;
