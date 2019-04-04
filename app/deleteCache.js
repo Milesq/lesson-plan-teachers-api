@@ -11,6 +11,7 @@ exports.default = (req, res) => {
 
         fs.unlinkSync('cache');
         res.send('Cache was deleted');
+        console.log(new Date + 'Cache was deleted');
     } catch (err) {
         console.log(err);
         res.send('Cache are empty!');
