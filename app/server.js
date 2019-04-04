@@ -11,8 +11,6 @@ app.set('port', process.env.PORT || 80);
 
 app.use(cors());
 
-// app.use(express.static(resolve('./dist/')));
-
 app.get('/', (...[, res]) => {
     res.send('Hello World');
 });

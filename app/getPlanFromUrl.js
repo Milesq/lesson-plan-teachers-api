@@ -19,7 +19,9 @@ function clear(document) {
 exports.getPlan = async url => {
     let hours =  [];
     const { data } = await axios.get(url);
-    let document = parse(data).querySelectorAll('table')[2];
+    let document = parse(data);
+    const classID = document.querySelector('.tytulnapis').innerHTML;
+    document = document.querySelectorAll('table')[2];
     document = clear(document);
     document.querySelectorAll('tr').forEach(el => {
         const hour = [];
@@ -30,6 +32,7 @@ exports.getPlan = async url => {
                 data['subject'] = (el.querySelector('.p') || {innerHTML: ''}).innerHTML;
                 data['teacher'] = teacher.innerHTML;
                 data['room'] = (el.querySelector('.s') || {innerHTML: ''}).innerHTML;
+                data['class'] = classID;
             }
 
             data['day'] = i + 1;
